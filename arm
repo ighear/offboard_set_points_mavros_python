@@ -21,7 +21,10 @@ from mavros.utils import *
 from tf.transformations import quaternion_from_euler
 
 # Arming drone
-mavros.set_namespace()
+
+def arm():
+    mavros.set_namespace()
+    command.arming(True)
 
 #Enable offboard mode
 
@@ -176,7 +179,7 @@ def setpoint_demo():
 
 if __name__ == '__main__':
     try:
-        command.arming(True)
+        arm()
         enable_offboard()
         setpoint_demo()
     except rospy.ROSInterruptException:
