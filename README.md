@@ -10,4 +10,5 @@ positions, so I believe I must be sending those commands incorrectly.
 The script can be seen in the file "arm", and the commands to set up the simulator and
 connect to it, and run the script can be seen in the file "Simulator and scripts". As
 I mentioned, the drone arms and sets offboard mode correctly using the script, and no
-syntax errors are displayed either, so the script is running fine and the drone is connected.
+syntax errors are displayed either, so the script is running fine and the drone is
+connected, and I am not sure what I am doing wrong.
