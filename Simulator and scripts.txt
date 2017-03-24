@@ -1,0 +1,29 @@
+# Install ROS, mavros, jmavsim
+
+# Running simulator and connecting to it
+# Open simulator and run it
+cd src/Firmware
+make posix_sitl_default jmavsim
+
+# To connect to a specific IP (fcu_url is the IP / port of SITL), use a URL in this form:
+
+roslaunch mavros px4.launch fcu_url:="udp://:14540@192.168.1.36:14557"
+
+# To connect to localhost, use this URL:
+
+roslaunch mavros px4.launch fcu_url:="udp://:14540@127.0.0.1:14557"
+
+# To prepare to run the script
+# First open and build the workspace
+cd ~/catkin_ws
+catkin init 
+
+# Then go to folder with scripts
+cd src/mavros/test_mavros/scripts
+
+# Create executable file from script
+chmod +x arm
+#(arm or whatever the name of the file is)
+
+# Run executable file
+rosrun test_mavros arm
